@@ -1,6 +1,6 @@
-const BlackBox = (props) => {
+const BlackBox = ({divStyle}) => {
   return (
-    <div style={props.divStyle} >
+    <div style={divStyle} >
       Look what I done! 🫢
       <br />
       (This is my component Blackbox)

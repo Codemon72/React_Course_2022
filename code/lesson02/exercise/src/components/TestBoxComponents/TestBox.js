@@ -1,7 +1,9 @@
-const TestBox = (props) => {
+const TestBox = ({backgroundColor, color}) => {
   return (
-    <div style={{ backgroundColor: props.backgroundColor, color: props.color, marginTop: '1rem', padding: '1rem' }}>
+    <div style={{ backgroundColor, color, marginTop: '1rem', padding: '1rem' }}>
       This is my Testbox.
+      <br />
+      Styling passed as direct props.
     </div>
   )
 }

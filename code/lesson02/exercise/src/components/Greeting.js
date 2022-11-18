@@ -1,9 +1,9 @@
 
-const Greeting = (props) => {
+const Greeting = ({name, location, children}) => {
   return (
     <>
-    <h1>Hello, {props.name} from {props.location}</h1>
-    {props.children}
+    <h1>Hello, {name} from {location}</h1>
+    {children}
     </>
   )
 }

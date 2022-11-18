@@ -1,6 +1,6 @@
-const RedBox = (props) => {
+const RedBox = ({divStyle}) => {
   return (
-    <div style={props.divStyle}>
+    <div style={divStyle}>
       Hurray! 😇🥳
       <br />
       (This is my component RedBox)

@@ -6,13 +6,17 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const numberOfMessages = 6
+  const numberOfMessages = 26
+
+  // const userName = 'Clemens'
+
+  // const userLocation = 'Hamburg'
 
   return (
     <main className='flex flex-col w-full h-full'>
       <Header numberOfMessages={numberOfMessages} />
       <div className='flex h-full'>
-        <Aside />
+        <Aside numberOfMessages={numberOfMessages}/>
         <Article numberOfMessages={numberOfMessages} />
       </div>
       <Footer />

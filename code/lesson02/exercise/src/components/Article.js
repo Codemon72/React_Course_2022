@@ -2,15 +2,15 @@ import Greeting from "./Greeting"
 import TestBoxComponents from "./TestBoxComponents"
 import MessageNotification from "./MessageNotification"
 
-const Article = (props) => {
+const Article = ({name, location, numberOfMessages}) => {
   return (
     <article className='p-4'>
-          <Greeting location={'Bangkok'} name={'Clemens'} >
+          <Greeting location={location} name={name} >
             <strong>This is a child.</strong>
             </Greeting>
           <br />
           <br />
-          <MessageNotification numberOfMessages={props.numberOfMessages} />
+          <MessageNotification numberOfMessages={numberOfMessages} />
           <br />
           <br />
           <TestBoxComponents />
