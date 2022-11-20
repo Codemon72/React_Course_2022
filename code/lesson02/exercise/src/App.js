@@ -3,10 +3,11 @@ import Header from './components/Header';
 import Aside from './components/Aside';
 import Article from './components/Article';
 import Footer from './components/Footer';
+import { useState } from 'react'
 
 function App() {
 
-  const numberOfMessages = 26
+  const [messageCounter, setMessageCounter] = useState(0)
 
   // const userName = 'Clemens'
 
@@ -14,10 +15,10 @@ function App() {
 
   return (
     <main className='flex flex-col w-full h-full'>
-      <Header numberOfMessages={numberOfMessages} />
+      <Header messageCounter={messageCounter} />
       <div className='flex h-full'>
-        <Aside numberOfMessages={numberOfMessages}/>
-        <Article numberOfMessages={numberOfMessages} />
+        <Aside messageCounter={messageCounter}/>
+        <Article messageCounter={messageCounter} setMessageCounter={setMessageCounter}/>
       </div>
       <Footer />
     </main>

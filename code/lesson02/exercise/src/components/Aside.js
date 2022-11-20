@@ -1,8 +1,8 @@
 import MenuItem from "./MenuItem"
 
-const Aside = ({numberOfMessages}) => {
+const Aside = ({messageCounter}) => {
 
-  const menu = [{title: 'Home', href: '#'}, {title: 'About me', href: '#about' }, {title: 'Inbox', href: '#inbox', count: numberOfMessages}]
+  const menu = [{title: 'Home', href: '#'}, {title: 'About me', href: '#about' }, {title: 'Inbox', href: '#inbox', count: messageCounter}]
 
   return (
     <aside className='w-1/4 h-full border-slate-400 border-r p-4'>
