@@ -2,12 +2,13 @@ import Greeting from "./Greeting"
 import TestBoxComponents from "./TestBoxComponents"
 import MessageNotification from "./MessageNotification"
 import CounterBox from "./CounterBox"
+import BatmanBox from "./BatmanBox"
 
-const Article = ({userName, userLocation, messageCounter, setMessageCounter}) => {
+const Article = ({user, setUser, messageCounter, setMessageCounter}) => {
   return (
     <article className='p-4'>
-          <Greeting userLocation={userLocation} userName={userName} >
-            <p>(Not Batman? Sign up here ->) <input type="text" placeholder="Name"/><input type="text" placeholder="Location"/></p>
+          <Greeting user={user} >
+            <BatmanBox setUser={setUser}/>
           </Greeting>
           <CounterBox setMessageCounter={setMessageCounter} messageCounter={messageCounter}/>
           <MessageNotification messageCounter={messageCounter} />

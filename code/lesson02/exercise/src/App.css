@@ -2,7 +2,12 @@ h1 {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
+p {
+  margin: 1rem 0;
+}
+form {
+  display: inline;
+}
 button {
   background-color: #008080;
   color: #fff;
@@ -10,6 +15,16 @@ button {
   margin-top: 1rem;
   border-radius: 1rem;
   display: block;
+}
+input {
+  border-bottom: 3px solid #008080;
+  padding: 3px 9px;
+  outline: none !important;
+  font-family: "Brush Script MT", cursive;
+  font-size: 1.5rem;
+}
+input[type=submit]{
+  display: none;
 }
 
 .counterbox {

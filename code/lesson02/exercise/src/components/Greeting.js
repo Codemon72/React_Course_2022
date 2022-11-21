@@ -1,8 +1,7 @@
-
-const Greeting = ({userName = 'Clemens', userLocation = 'Hamburg', children}) => {
+const Greeting = ({user, children}) => {
   return (
     <>
-    <h1>Hello, {userName} from {userLocation}</h1>
+    <h1>Hello, {user.userName} from {user.userLocation}!</h1>
     {children}
     </>
   )
