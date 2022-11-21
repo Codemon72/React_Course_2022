@@ -20,7 +20,7 @@ input {
   border-bottom: 3px solid #008080;
   padding: 3px 9px;
   outline: none !important;
-  font-family: "Brush Script MT", cursive;
+  font-style: italic;
   font-size: 1.5rem;
 }
 input[type=submit]{

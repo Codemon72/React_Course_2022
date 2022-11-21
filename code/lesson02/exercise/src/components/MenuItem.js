@@ -7,6 +7,7 @@ const MenuItem = ({title, href, count}) => {
         </a>
       </li>
       {/* {count && <span>&nbsp; ({count} messages)</span>} */}
+      {/* todo */}
       {count && count > 1 && <span>&nbsp; ({count} messages)</span>}
       {count && count === 1 && <span>&nbsp; ({count} message)</span>}
       {count && count === 0 && <span>&nbsp; (no messages)</span>}

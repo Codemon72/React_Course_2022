@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-const BatmanBox = ({setUser}) => {
+const BatmanBox = ({user, setUser}) => {
 
   const initialFormState = {
     userName: '',
     userLocation: ''
-  };
+  }
 
   const [formState, setFormState] = useState(initialFormState);
 
@@ -22,26 +22,42 @@ const BatmanBox = ({setUser}) => {
     setUser(formState)
   }
 
+  // todo
+  const loggedIn = user !== { userName: 'Batman', userLocation: 'Gotham' }
+  console.log(user)
+  
   return (
-    <div>
-      <p>Not Batman? <br />
-      No, I'm <form onSubmit={updateUser}>
-      <input 
-        type="text" 
-        placeholder="Name" 
-        name='userName'
-        value={formState.userName}
-        onChange={handleInputChange}/> from  
-      <input 
-        type="text" 
-        placeholder="Location" 
-        name='userLocation'
-        value={formState.userLocation}
-        onChange={handleInputChange}/>
-      <input type="submit" value="" />
-      </form>.</p>
-    </div>
-  )
+    <>
+    {/* todo */}
+      {user !== { userName: 'Batman', userLocation: 'Gotham' } && (
+        <div>
+          <p>
+            Not Batman? <br />
+            No, I'm{' '}
+            <form onSubmit={updateUser}>
+              <input
+                type='text'
+                placeholder='Name'
+                name='userName'
+                value={formState.userName}
+                onChange={handleInputChange}
+              />{' '}
+              from
+              <input
+                type='text'
+                placeholder='Location'
+                name='userLocation'
+                value={formState.userLocation}
+                onChange={handleInputChange}
+              />
+              <input type='submit' />
+            </form>
+            .
+          </p>
+        </div>
+      )}
+    </>
+  );
 }
 
 export default BatmanBox
