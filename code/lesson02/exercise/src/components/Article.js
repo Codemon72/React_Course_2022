@@ -5,6 +5,7 @@ import MessageNotification from "./MessageNotification"
 import CounterBox from "./CounterBox"
 import BatmanBox from "./BatmanBox"
 import CountingContainer from "./TestBoxComponents/CountingContainer"
+import ExampleForm from "./ExampleForm"
 
 const Article = ({messageCounter, setMessageCounter}) => {
 
@@ -22,6 +23,7 @@ const Article = ({messageCounter, setMessageCounter}) => {
           <TestBoxComponents />
           <br /><br />
           <CountingContainer />
+          <ExampleForm />
         </article>
   )
 }
