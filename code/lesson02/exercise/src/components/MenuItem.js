@@ -1,4 +1,4 @@
-const MenuItem = ({title, href, count}) => {
+const MenuItem = ({ title, href, count }) => {
   return (
     <>
       <li>
@@ -6,13 +6,11 @@ const MenuItem = ({title, href, count}) => {
           {title}
         </a>
       </li>
-      {/* {count && <span>&nbsp; ({count} messages)</span>} */}
-      {/* todo */}
-      {count && count > 1 && <span>&nbsp; ({count} messages)</span>}
-      {count && count === 1 && <span>&nbsp; ({count} message)</span>}
-      {count && count === 0 && <span>&nbsp; (no messages)</span>}
+      {Boolean(count) && count > 1 && <span>&nbsp; ({count} messages)</span>}
+      {Boolean(count) && count === 1 && <span>&nbsp; ({count} message)</span>}
+      {count === 0 && <span>&nbsp; (no messages)</span>}
     </>
   );
-}
+};
 
-export default MenuItem
+export default MenuItem;

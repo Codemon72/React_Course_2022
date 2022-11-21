@@ -22,14 +22,11 @@ const BatmanBox = ({user, setUser}) => {
     setUser(formState)
   }
 
-  // todo
-  const loggedIn = user !== { userName: 'Batman', userLocation: 'Gotham' }
-  console.log(user)
+  const loggedIn = user.userName === 'Batman' && user.userLocation === 'Gotham'
   
   return (
     <>
-    {/* todo */}
-      {user !== { userName: 'Batman', userLocation: 'Gotham' } && (
+      {loggedIn && (
         <div>
           <p>
             Not Batman? <br />
