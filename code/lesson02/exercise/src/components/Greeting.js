@@ -1,8 +1,8 @@
 
-const Greeting = ({name, location, children}) => {
+const Greeting = ({userName = 'Clemens', userLocation = 'Hamburg', children}) => {
   return (
     <>
-    <h1>Hello, {name} from {location}</h1>
+    <h1>Hello, {userName} from {userLocation}</h1>
     {children}
     </>
   )

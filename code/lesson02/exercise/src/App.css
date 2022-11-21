@@ -1,8 +1,6 @@
-.counterbox {
-  border: 3px solid #008080;
-  border-radius: 1rem;
-  padding: 1rem;
-  margin: 2rem 0;
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 button {
@@ -12,4 +10,11 @@ button {
   margin-top: 1rem;
   border-radius: 1rem;
   display: block;
+}
+
+.counterbox {
+  border: 3px solid #008080;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem 0;
 }

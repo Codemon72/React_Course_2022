@@ -8,17 +8,19 @@ import { useState } from 'react'
 function App() {
 
   const [messageCounter, setMessageCounter] = useState(0)
-
-  // const userName = 'Clemens'
-
-  // const userLocation = 'Hamburg'
+  const [userName, setUserName] = useState('Batman')
+  const [userLocation, setUserLocation] = useState('Gotham')
 
   return (
     <main className='flex flex-col w-full h-full'>
       <Header messageCounter={messageCounter} />
       <div className='flex h-full'>
         <Aside messageCounter={messageCounter}/>
-        <Article messageCounter={messageCounter} setMessageCounter={setMessageCounter}/>
+        <Article 
+          userName={userName} 
+          userLocation={userLocation}
+          messageCounter={messageCounter} 
+          setMessageCounter={setMessageCounter}/>
       </div>
       <Footer />
     </main>
