@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react'
 
 const CallApiExercise = () => {
 
+  const initialCodemonObject = {
+    name: '',
+    img_src: '',
+    species: '',
+    abilities: []
+  }
+
   const [callAPI, setCallAPI] = useState(false)
-  const [randomPokemon, setRandomPokemon] = useState({})
+  const [randomPokemon, setRandomPokemon] = useState(initialCodemonObject)
 
 useEffect(() => {
 
@@ -13,7 +20,7 @@ useEffect(() => {
   
       fetch(url)
         .then((response) => response.json())
-        .then((pokemon) => setRandomPokemon(pokemon))
+        .then((pokemon) => setRandomPokemon({name: pokemon.name, img_src: pokemon.sprites.front_default, species: pokemon.species.name, abilities: [...pokemon.abilities]}))
         .then(() => setCallAPI(false))
   }
 }, [callAPI]);
@@ -33,16 +40,16 @@ useEffect(() => {
       {callAPI && <i>Loading...</i>}
       {randomPokemon.img_src !== '' && (
         <div className='pokemon_result'>
-        <h3>{randomPokemon.name.toUpperCase()}</h3>
+        <h3>{randomPokemon?.name?.toUpperCase()}</h3>
         <img
-          src={randomPokemon.img_src}
-          alt={randomPokemon.name}
+          src={randomPokemon?.img_src}
+          alt={randomPokemon?.name}
           className='pokemon_img'
         />
         <span>Species: {randomPokemon.species}</span>
         <br />
         <strong>Ablities:</strong>
-        {randomPokemon.abilities.map((index) => (<span>{index.ability.name}</span>))}
+        {randomPokemon?.abilities?.map((index) => (<span>{index.ability.name}</span>))}
       </div>
       )}
     </div>
