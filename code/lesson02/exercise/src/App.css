@@ -2,6 +2,13 @@ h1 {
   font-size: 1.5rem;
   font-weight: bold;
 }
+h2 {
+  font-size: 1.2rem;
+  color: #008080;
+  font-weight: bold;
+  border-bottom: 2px solid #008080;
+  margin-bottom: 2rem;
+}
 p {
   margin: 1rem 0;
 }
@@ -32,6 +39,7 @@ input[type=submit]{
   padding: 1.5rem 1rem;
   border: 2px solid #008080;
   border-radius: 1rem;
+  box-shadow: 4px 8px 16px rgba(0,0,0,0.1);
 }
 .counterbox {
   border: 3px solid #008080;

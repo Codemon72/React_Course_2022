@@ -20,7 +20,7 @@ const CountingContainer = () => {
 
   return (
     <div className='component'>
-      <h3>Counter</h3>
+      <h2>CountingContainer</h2>
       We are at: {count}
       <button onClick={handlePlusOne}>add +1</button><br />
       <button onClick={handleMinusOne}>subtract -1</button><br />

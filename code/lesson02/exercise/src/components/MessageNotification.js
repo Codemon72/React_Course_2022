@@ -1,7 +1,8 @@
 
 const MessageNotification = ({messageCounter}) => {
   return (
-    <div>
+    <div className="component">
+      <h2>MessageNotification</h2>
       you have <strong>{messageCounter}</strong> unread messages.
       <br />
       <br />

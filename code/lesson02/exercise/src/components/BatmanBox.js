@@ -25,7 +25,8 @@ const BatmanBox = ({user, setUser}) => {
   const loggedIn = user.userName === 'Batman' && user.userLocation === 'Gotham'
   
   return (
-    <>
+    <div className="component">
+    <h2>BatmanBox</h2>
       {loggedIn && (
         <div>
           <p>
@@ -53,7 +54,7 @@ const BatmanBox = ({user, setUser}) => {
           </p>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

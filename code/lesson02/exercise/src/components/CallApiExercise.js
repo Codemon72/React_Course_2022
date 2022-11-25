@@ -28,6 +28,7 @@ useEffect(() => {
 
   return (
     <div className='component'>
+      <h2>CallAPIExercise</h2>
       <button
         onClick={() => {
           setCallAPI(true);

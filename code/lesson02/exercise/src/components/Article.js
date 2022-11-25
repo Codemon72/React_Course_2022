@@ -8,6 +8,7 @@ import CountingContainer from "./TestBoxComponents/CountingContainer"
 import ExampleForm from "./ExampleForm"
 import FormAndProfile from "./FormAndProfile"
 import CallApiExercise from "./CallApiExercise"
+import RouterExample from "./RouterExample"
 
 const Article = ({messageCounter, setMessageCounter}) => {
 
@@ -17,16 +18,14 @@ const Article = ({messageCounter, setMessageCounter}) => {
 
   return (
     <article className='p-4'>
+      <RouterExample />
           <CallApiExercise />
           <Greeting user={user} >
             <BatmanBox user={user} setUser={setUser}/>
           </Greeting>
           <CounterBox setMessageCounter={setMessageCounter} messageCounter={messageCounter}/>
           <MessageNotification messageCounter={messageCounter} />
-          <br />
-          <br />
           <TestBoxComponents />
-          <br /><br />
           <CountingContainer />
           <ExampleForm />
           <FormAndProfile />

@@ -13,11 +13,12 @@ const TestBoxComponents = () => {
   };
   
   return (
-    <>
+    <div className='component'>
+      <h2>TestBoxComponents</h2>
       <BlackBox divStyle={divStyle} />
       <RedBox divStyle={{ color: 'white', backgroundColor: 'red', height: '150px', width: '300px', marginTop: '1rem', padding: '1rem' }} />
       <TestBox backgroundColor='purple' color='white' />
-    </>
+    </div>
   )
 }
 

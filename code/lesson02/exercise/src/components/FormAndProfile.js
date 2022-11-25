@@ -27,6 +27,7 @@ const FormAndProfile = () => {
 
   return (
     <div className='component'>
+      <h2>FormAndProfile</h2>
       <span>First Name: {personData.firstName}</span>
       <br />
       <span>Last Name: {personData.lastName}</span>

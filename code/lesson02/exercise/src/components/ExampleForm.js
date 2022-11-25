@@ -18,7 +18,8 @@ const ExampleForm = () => {
   }
 
   return (
-    <div>
+    <div className='component'>
+      <h2>ExampleForm</h2>
       <hr />
       <ul>
         {nameArray.map(arrayItem => {

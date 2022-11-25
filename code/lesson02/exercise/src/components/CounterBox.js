@@ -16,7 +16,7 @@ const CounterBox = ({messageCounter, setMessageCounter}) => {
 
   return (
     <div className='counterbox'>
-      <h3>CounterBox</h3>
+      <h2>CounterBox</h2>
       <button onClick={increaseMessage}>+1 Message</button>
       <button onClick={decreaseMessageNumber}>-1 Messages</button>
       <button onClick={resetMessageNumber}>reset Number of Messages to 0</button>
