@@ -13,6 +13,8 @@ const Article = ({messageCounter, setMessageCounter}) => {
 
   const [user, setUser] = useState({userName: 'Batman', userLocation: 'Gotham'})
 
+
+
   return (
     <article className='p-4'>
           <CallApiExercise />

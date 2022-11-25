@@ -22,8 +22,10 @@ useEffect(() => {
   return (
     <div className='component'>
       <button onClick={() => {setCallAPI(true)}}> Call to API for a Pokemon Name</button>
-
-      <span id='result'></span>
+      <br />
+      {callAPI && (<i>Loading...</i>)}
+      <span id='result'>
+        </span>
     </div>
   );
 }
