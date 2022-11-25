@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const BatmanBox = ({user, setUser}) => {
+const BatmanBox = ({user , setUser}) => {
 
   const initialFormState = {
     userName: '',
@@ -23,11 +23,12 @@ const BatmanBox = ({user, setUser}) => {
   }
 
   const loggedIn = user.userName === 'Batman' && user.userLocation === 'Gotham'
+
+  if (!loggedIn){return null}
   
   return (
     <div className="component">
     <h2>BatmanBox</h2>
-      {loggedIn && (
         <div>
           <p>
             Not Batman? <br />
@@ -53,7 +54,6 @@ const BatmanBox = ({user, setUser}) => {
             .
           </p>
         </div>
-      )}
     </div>
   );
 }

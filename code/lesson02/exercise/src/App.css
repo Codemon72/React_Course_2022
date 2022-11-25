@@ -64,3 +64,15 @@ input[type=submit]{
   height: 150px;
   width: 150px;
 }
+.nav_link {
+  background-color: #008080;
+  color: #fff;
+  border-radius: 6px;
+  margin: .5rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+.nav_link:hover {
+  background-color: darkslategray;
+  font-style: italic;
+}

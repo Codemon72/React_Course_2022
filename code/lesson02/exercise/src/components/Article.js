@@ -4,7 +4,7 @@ import TestBoxComponents from "./TestBoxComponents"
 import MessageNotification from "./MessageNotification"
 import CounterBox from "./CounterBox"
 import BatmanBox from "./BatmanBox"
-import CountingContainer from "./TestBoxComponents/CountingContainer"
+import CountingContainer from "./CountingContainer"
 import ExampleForm from "./ExampleForm"
 import FormAndProfile from "./FormAndProfile"
 import CallApiExercise from "./CallApiExercise"
@@ -13,8 +13,6 @@ import RouterExample from "./RouterExample"
 const Article = ({messageCounter, setMessageCounter}) => {
 
   const [user, setUser] = useState({userName: 'Batman', userLocation: 'Gotham'})
-
-
 
   return (
     <article className='p-4'>
