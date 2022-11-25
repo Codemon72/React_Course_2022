@@ -2,14 +2,8 @@ import { useState, useEffect } from 'react'
 
 const CallApiExercise = () => {
 
-  const initialCodemonObject = {
-    name: '',
-    img_src: '',
-    species: '',
-    abilities: []
-  }
   const [callAPI, setCallAPI] = useState(false)
-  const [randomPokemon, setRandomPokemon] = useState(initialCodemonObject)
+  const [randomPokemon, setRandomPokemon] = useState({})
 
 useEffect(() => {
 
@@ -19,12 +13,10 @@ useEffect(() => {
   
       fetch(url)
         .then((response) => response.json())
-        .then((pokemon) => setRandomPokemon({name: pokemon.name, img_src: pokemon.sprites.front_default, species: pokemon.species.name, abilities: [...pokemon.abilities]}))
+        .then((pokemon) => setRandomPokemon(pokemon))
         .then(() => setCallAPI(false))
   }
 }, [callAPI]);
-
-console.log(randomPokemon)
 
 
   return (
@@ -49,7 +41,7 @@ console.log(randomPokemon)
         />
         <span>Species: {randomPokemon.species}</span>
         <br />
-        <strong>Ablities</strong>
+        <strong>Ablities:</strong>
         {randomPokemon.abilities.map((index) => (<span>{index.ability.name}</span>))}
       </div>
       )}
