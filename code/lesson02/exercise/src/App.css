@@ -27,6 +27,12 @@ input[type=submit]{
   display: none;
 }
 
+.component {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  border: 2px solid #008080;
+  border-radius: 1rem;
+}
 .counterbox {
   border: 3px solid #008080;
   border-radius: 1rem;

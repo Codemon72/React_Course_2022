@@ -6,6 +6,8 @@ import CounterBox from "./CounterBox"
 import BatmanBox from "./BatmanBox"
 import CountingContainer from "./TestBoxComponents/CountingContainer"
 import ExampleForm from "./ExampleForm"
+import FormAndProfile from "./FormAndProfile"
+import CallApiExercise from "./CallApiExercise"
 
 const Article = ({messageCounter, setMessageCounter}) => {
 
@@ -13,6 +15,7 @@ const Article = ({messageCounter, setMessageCounter}) => {
 
   return (
     <article className='p-4'>
+          <CallApiExercise />
           <Greeting user={user} >
             <BatmanBox user={user} setUser={setUser}/>
           </Greeting>
@@ -24,6 +27,7 @@ const Article = ({messageCounter, setMessageCounter}) => {
           <br /><br />
           <CountingContainer />
           <ExampleForm />
+          <FormAndProfile />
         </article>
   )
 }
