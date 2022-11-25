@@ -4,7 +4,9 @@ const CallApiExercise = () => {
 
   const initialCodemonObject = {
     name: '',
-    img_src: ''
+    img_src: '',
+    species: '',
+    abilities: []
   }
   const [callAPI, setCallAPI] = useState(false)
   const [randomPokemon, setRandomPokemon] = useState(initialCodemonObject)
@@ -17,10 +19,12 @@ useEffect(() => {
   
       fetch(url)
         .then((response) => response.json())
-        .then((pokemon) => setRandomPokemon({name: pokemon.name, img_src: pokemon.sprites.front_default}))
+        .then((pokemon) => setRandomPokemon({name: pokemon.name, img_src: pokemon.sprites.front_default, species: pokemon.species.name, abilities: [...pokemon.abilities]}))
         .then(() => setCallAPI(false))
   }
 }, [callAPI]);
+
+console.log(randomPokemon)
 
 
   return (
@@ -43,6 +47,10 @@ useEffect(() => {
           alt={randomPokemon.name}
           className='pokemon_img'
         />
+        <span>Species: {randomPokemon.species}</span>
+        <br />
+        <strong>Ablities</strong>
+        {randomPokemon.abilities.map((index) => (<span>{index.ability.name}</span>))}
       </div>
       )}
     </div>
