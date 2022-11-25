@@ -37,7 +37,7 @@ useEffect(() => {
       {callAPI && <i>Loading...</i>}
       {randomPokemon.img_src !== '' && (
         <div className='pokemon_result'>
-        <h4>{randomPokemon.name.toUpperCase()}</h4>
+        <h3>{randomPokemon.name.toUpperCase()}</h3>
         <img
           src={randomPokemon.img_src}
           alt={randomPokemon.name}
