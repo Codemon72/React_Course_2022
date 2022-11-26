@@ -1,12 +1,12 @@
 # Fullstack 2022/3 – React module - starting 14.11.2022
 
-To have a look inside:
+To check out this repo:
 
 1. clone repository
 2. cd into `code/lesson02/exercise` and run `npm install`
 3. run `npm start`
 
-- almost no effort was spent on the styling - all on the react magic
+> (almost no effort was spent on the styling - all on the react magic)
 
 ### Examples of
 - conditional rendering / short circuiting (`{ isActive && 'Hello!' }`)
