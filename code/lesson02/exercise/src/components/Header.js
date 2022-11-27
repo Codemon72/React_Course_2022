@@ -1,11 +1,10 @@
 const Header = ({messageCounter}) => {
   return (
-    <header className='w-full bg-gray-100 border-b border-slate-400 h-16 flex items-center px-4 justify-between'>
-        <div className='text-xl font-bold'>My Component Page</div>
+    <header className='header'>
+        <div className='title'>My Component Page - React Course 2022-11</div>
 
-        <span className='relative inline-block'>
+        <span className='pos-relative message-icon'>
           <svg
-            className='w-6 h-6 text-slate-600 fill-current'
             viewBox='0 0 20 20'
           >
             <path
@@ -14,7 +13,7 @@ const Header = ({messageCounter}) => {
               fillRule='evenodd'
             ></path>
           </svg>
-          <span className='absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full'>
+          <span>
             {messageCounter}
           </span>
         </span>

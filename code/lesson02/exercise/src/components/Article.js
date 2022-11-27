@@ -15,7 +15,7 @@ const Article = ({messageCounter, setMessageCounter}) => {
   const [user, setUser] = useState({userName: 'Batman', userLocation: 'Gotham'})
 
   return (
-    <article className='p-4'>
+    <article className='p-4 article'>
       <RouterExample />
           <CallApiExercise />
           <Greeting user={user} >

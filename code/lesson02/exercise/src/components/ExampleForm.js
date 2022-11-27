@@ -22,8 +22,8 @@ const ExampleForm = () => {
       <h2>ExampleForm</h2>
       <hr />
       <ul>
-        {nameArray.map(arrayItem => {
-          return (<li>{arrayItem}</li>)
+        {nameArray.map((arrayItem, index) => {
+          return (<li key={index}>{arrayItem}</li>)
         })}
       </ul>
       <input 

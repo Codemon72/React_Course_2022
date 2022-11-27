@@ -10,9 +10,9 @@ function App() {
   const [messageCounter, setMessageCounter] = useState(0)
 
   return (
-    <main className='flex flex-col w-full h-full'>
+    <main>
       <Header messageCounter={messageCounter} />
-      <div className='flex h-full'>
+      <div className='flex'>
         <Aside messageCounter={messageCounter}/>
         <Article 
           messageCounter={messageCounter} 
