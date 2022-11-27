@@ -9,26 +9,33 @@ import ExampleForm from "./ExampleForm"
 import FormAndProfile from "./FormAndProfile"
 import CallApiExercise from "./CallApiExercise"
 import RouterExample from "./RouterExample"
+import DynamicRouting from "./DynamicRouting"
 
-const Article = ({messageCounter, setMessageCounter}) => {
-
-  const [user, setUser] = useState({userName: 'Batman', userLocation: 'Gotham'})
+const Article = ({ messageCounter, setMessageCounter }) => {
+  const [user, setUser] = useState({
+    userName: 'Batman',
+    userLocation: 'Gotham',
+  });
 
   return (
     <article className='p-4 article'>
+      <DynamicRouting />
       <RouterExample />
-          <CallApiExercise />
-          <Greeting user={user} >
-            <BatmanBox user={user} setUser={setUser}/>
-          </Greeting>
-          <CounterBox setMessageCounter={setMessageCounter} messageCounter={messageCounter}/>
-          <MessageNotification messageCounter={messageCounter} />
-          <TestBoxComponents />
-          <CountingContainer />
-          <ExampleForm />
-          <FormAndProfile />
-        </article>
-  )
-}
+      <CallApiExercise />
+      <Greeting user={user}>
+        <BatmanBox user={user} setUser={setUser} />
+      </Greeting>
+      <CounterBox
+        setMessageCounter={setMessageCounter}
+        messageCounter={messageCounter}
+      />
+      <MessageNotification messageCounter={messageCounter} />
+      <TestBoxComponents />
+      <CountingContainer />
+      <ExampleForm />
+      <FormAndProfile />
+    </article>
+  );
+};
 
 export default Article

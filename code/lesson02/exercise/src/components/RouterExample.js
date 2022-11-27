@@ -1,5 +1,5 @@
-import { Switch, Link, Route } from 'wouter';
-import CountingContainer from './CountingContainer';
+import { Switch, Link, Route } from 'wouter'
+import CountingContainer from './CountingContainer'
 import CallApiExercise from './CallApiExercise'
 
 const RouterExample = () => {

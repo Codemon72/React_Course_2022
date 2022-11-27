@@ -26,6 +26,7 @@ const ExampleForm = () => {
           return (<li key={index}>{arrayItem}</li>)
         })}
       </ul>
+      <br />
       <input 
         type="text" 
         placeholder='Enter a Name'
