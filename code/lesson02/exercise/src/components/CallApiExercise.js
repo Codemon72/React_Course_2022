@@ -55,7 +55,7 @@ const CallApiExercise = () => {
           <br />
           <strong>Ablities:</strong>
           {randomPokemon?.abilities?.map((index) => (
-            <span>{index.ability.name}</span>
+            <span key={index.ability.name}>{index.ability.name}</span>
           ))}
         </div>
       )}

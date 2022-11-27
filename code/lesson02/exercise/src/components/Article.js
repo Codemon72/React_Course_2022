@@ -25,11 +25,11 @@ const Article = ({ messageCounter, setMessageCounter }) => {
       <Greeting user={user}>
         <BatmanBox user={user} setUser={setUser} />
       </Greeting>
+      <MessageNotification messageCounter={messageCounter} />
       <CounterBox
         setMessageCounter={setMessageCounter}
         messageCounter={messageCounter}
       />
-      <MessageNotification messageCounter={messageCounter} />
       <TestBoxComponents />
       <CountingContainer />
       <ExampleForm />

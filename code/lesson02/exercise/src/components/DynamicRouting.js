@@ -30,7 +30,7 @@ const DynamicRouting = () => {
       </nav>
 
       <Route path='/pokemon/:name'>
-        {(params) => <DynamicPokemonCard name={params.name} />}
+        {params => <DynamicPokemonCard name={params.name} />}
       </Route>
     </div>
   );
