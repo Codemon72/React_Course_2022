@@ -1,43 +1,43 @@
-import {useState} from 'react'
+import { useState } from 'react';
 
 const FormAndProfile = () => {
-
   const initialPersonData = {
     firstName: '',
     lastName: '',
     age: '',
-    location: ''
-  }
+    location: '',
+  };
 
-  const [personDataArray, setPersonDataArray] = useState([])
-  const [personData, setPersonData] = useState(initialPersonData)
+  const [personDataArray, setPersonDataArray] = useState([]);
+  const [personData, setPersonData] = useState(initialPersonData);
 
-
-  const handelFormInputChange = (name, event) => {
-    const { value } = event.target
-    setPersonData({...personData, [name]: value}) // todo: look up: computed property + object literals
-    // setPersonData({...personData, twitter: event.target.value,})
-  }
+  const handelFormInputChange = (event) => {
+    const { name, value } = event.target;
+    // combination of
+    // - spread operator `...exampleObj`
+    // - object literals: `, ` and
+    // - computed property `[exampleKey]: exampleValue`
+    setPersonData({ ...personData, [name]: value });
+  };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    setPersonDataArray([...personDataArray, personData])
-    setPersonData(initialPersonData)
-  }
+    setPersonDataArray([...personDataArray, personData]);
+    setPersonData(initialPersonData);
+  };
 
   return (
     <div className='component'>
       <h2>FormAndProfile</h2>
-      <span>First Name: {personData.firstName}</span>
-      <br />
-      <span>Last Name: {personData.lastName}</span>
-      <br />
-      <span>Age: {personData.age}</span>
-      <br />
-      <span>Location: {personData.location}</span>
-      <br />
-      <br />
-      <br />
+      <div className='card-component'>
+        <span>First Name: {personData.firstName}</span>
+        <br />
+        <span>Last Name: {personData.lastName}</span>
+        <br />
+        <span>Age: {personData.age}</span>
+        <br />
+        <span>Location: {personData.location}</span>
+      </div>
 
       <form onSubmit={handleFormSubmit}>
         <input
@@ -45,9 +45,9 @@ const FormAndProfile = () => {
           name='firstName'
           placeholder='First Name'
           value={personData.firstName}
-          // onChange={handelFormInputChange}
-          onChange={(event) => handelFormInputChange("firstName", event)}
+          onChange={handelFormInputChange}
         />
+        <br />
         <input
           type='text'
           name='lastName'
@@ -55,6 +55,7 @@ const FormAndProfile = () => {
           value={personData.lastName}
           onChange={handelFormInputChange}
         />
+        <br />
         <input
           type='text'
           name='age'
@@ -62,6 +63,7 @@ const FormAndProfile = () => {
           value={personData.age}
           onChange={handelFormInputChange}
         />
+        <br />
         <input
           type='text'
           name='location'
@@ -73,9 +75,9 @@ const FormAndProfile = () => {
         <input type='submit' />
       </form>
 
-      {personDataArray.map((person) => {
+      {personDataArray.map((person, index) => {
         return (
-          <div>
+          <div key={index} className='component'>
             <span>First Name: {person.firstName}</span>
             <br />
             <span>Last Name: {person.lastName}</span>
@@ -89,6 +91,6 @@ const FormAndProfile = () => {
       })}
     </div>
   );
-}
+};
 
-export default FormAndProfile
+export default FormAndProfile;

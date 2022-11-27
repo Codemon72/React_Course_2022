@@ -18,8 +18,49 @@ To check out this repo:
 
 ### Notes from the Course
 
+- 2 (slightly) different ways to handle change in **multiple input elements**:
+Using input attribute 'name' and passing 'name' and 'value' inside the event object from the input field to the handler function, then destructuring it:
+```js
+const initialPersonData = {
+  firstName: '',
+  // ...
+};
+
+const [personData, setPersonData] = useState(initialPersonData);
+
+const handelFormInputChange = (event) => {
+  const { name, value } = event.target;
+  setPersonData({ ...personData, [name]: value });
+};
+
+<input
+  value={personData.firstName}
+  name='firstName'
+  onChange={handelFormInputChange(event)}
+/>
+```
+Passing 'name' and 'value' (inside the event object) as separate parameters from the input field to the handler function, then destructuring only the 'value' from the event object:
+```js
+const initialPersonData = {
+  firstName: '',
+  // ...
+};
+
+const [personData, setPersonData] = useState(initialPersonData);
+
+const handelFormInputChange = (name, event) => {
+  const { value } = event.target;
+  setPersonData({ ...personData, [name]: value });
+};
+
+<input
+  value={personData.firstName}
+  onChange={(event) => handelFormInputChange('firstName', event)}
+/>
+```
+
 - uses of `?` inside JS: 
-  - as part of the ternary operator
+  - as part of the **ternary operator**
   - for ['optional chaining'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining):
   ```js
   // An empty person object with missing optional location information
@@ -28,7 +69,7 @@ To check out this repo:
   // The following will equate to undefined instead of an error
   const currentAddress = person.location?.address
   ```
-  - in 'nullish coalescing': The nullish coalescing ( ?? ) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined , and otherwise returns its left-hand side operand)
+  - in **'nullish coalescing'**: The nullish coalescing ( ?? ) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined , and otherwise returns its left-hand side operand)
   ```js
   const foo = null ?? 'default string';
   console.log(foo);
