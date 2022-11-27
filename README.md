@@ -11,7 +11,7 @@ To check out this repo:
 ### Examples of
 - conditional rendering / short circuiting 
 - input field as controlled component
-- API call inside useEffect
+- API call inside useEffect / "pure function"
 - routing with [Wouter](https://github.com/molefrog/wouter)
 - dynamic routing
 
@@ -143,3 +143,6 @@ const handelFormInputChange = (name, event) => {
         }} //...
   )
 ```
+
+> Final Remarks: many thanks to the free https://pokeapi.co/ API
+> 👉 No Pokemons where hurt during the course of these exercises! 👈
