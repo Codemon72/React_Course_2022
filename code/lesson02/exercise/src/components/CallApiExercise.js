@@ -31,7 +31,7 @@ const CallApiExercise = () => {
       {isCallingAPI && !randomPokemon.hasOwnProperty('name') && (
         <i>Loading...</i>
       )}
-      {randomPokemon.hasOwnProperty('name') && (
+      {Object.keys(randomPokemon).length > 0 && (
         <div className='pokemon_result'>
           <h3>{randomPokemon?.name?.toUpperCase()}</h3>
           {/* conditional rendering with ternary operator: */}
