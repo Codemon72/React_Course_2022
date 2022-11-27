@@ -1,57 +1,50 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 const CallApiExercise = () => {
-  const initialCodemonObject = {
-    name: '',
-    img_src: '',
-    species: '',
-    abilities: [],
-  };
-
-  const [callAPI, setCallAPI] = useState(false);
-  const [randomPokemon, setRandomPokemon] = useState(initialCodemonObject);
+  const [isCallingAPI, setIsCallingAPI] = useState(false);
+  const [randomPokemon, setRandomPokemon] = useState({});
 
   useEffect(() => {
-    if (callAPI) {
+    if (isCallingAPI) {
       const id = Math.round(Math.random() * 898) + 1;
       let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
       fetch(url)
         .then((response) => response.json())
-        .then((pokemon) =>
-          setRandomPokemon({
-            name: pokemon.name,
-            img_src: pokemon.sprites.front_default,
-            species: pokemon.species.name,
-            abilities: [...pokemon.abilities],
-          })
-        )
-        .then(() => setCallAPI(false));
+        .then((pokemon) => setRandomPokemon(pokemon))
+        .then(() => setIsCallingAPI(false));
     }
-  }, [callAPI]);
+  }, [isCallingAPI]);
 
   return (
     <div className='component'>
       <h2>CallAPIExercise</h2>
       <button
         onClick={() => {
-          setCallAPI(true);
+          setIsCallingAPI(true);
         }}
       >
         {' '}
         Call to API for random Pokemon
       </button>
       <br />
-      {callAPI && <i>Loading...</i>}
-      {randomPokemon.img_src !== '' && (
+      {isCallingAPI && !randomPokemon.hasOwnProperty('name') && (
+        <i>Loading...</i>
+      )}
+      {randomPokemon.hasOwnProperty('name') && (
         <div className='pokemon_result'>
           <h3>{randomPokemon?.name?.toUpperCase()}</h3>
-          <img
-            src={randomPokemon?.img_src}
-            alt={randomPokemon?.name}
-            className='pokemon_img'
-          />
-          <span>Species: {randomPokemon.species}</span>
+          {/* conditional rendering with ternary operator: */}
+          {isCallingAPI ? (
+            <i className='pokemon_img'>Loading...</i>
+          ) : (
+            <img
+              src={randomPokemon?.sprites?.front_default}
+              alt={randomPokemon?.name}
+              className='pokemon_img'
+            />
+          )}
+          <span>ID: {randomPokemon?.id}</span>
           <br />
           <strong>Ablities:</strong>
           {randomPokemon?.abilities?.map((index) => (
@@ -63,4 +56,4 @@ const CallApiExercise = () => {
   );
 };
 
-export default CallApiExercise
+export default CallApiExercise;

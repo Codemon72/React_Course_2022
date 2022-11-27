@@ -27,6 +27,9 @@ const DynamicRouting = () => {
         <Link href='/pokemon/mantine'>
           <span className='nav_link'>Mantine</span>
         </Link>
+        <Link href='/pokemon/comfey'>
+          <span className='nav_link'>Comfey</span>
+        </Link>
       </nav>
 
       <Route path='/pokemon/:name'>
