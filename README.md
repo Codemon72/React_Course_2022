@@ -6,7 +6,7 @@ To check out this repo:
 2. cd into `code/lesson02/exercise` and run `npm install`
 3. run `npm start`
 
-> (almost no effort was spent on the styling - all on the react magic)
+> (little effort was spent on the styling 👉 all on the react magic)
 
 ### Examples of
 - conditional rendering / short circuiting 

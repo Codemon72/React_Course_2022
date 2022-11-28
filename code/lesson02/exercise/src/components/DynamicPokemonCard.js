@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const DynamicPokemonCard = ({ name }) => {
   const [dynamicPokemon, setDynamicPokemon] = useState({});
-  const [ApiCallFinished, setApiCallFiinished] = useState(false);
+  const [apiCallFinished, setApiCallFinished] = useState(false);
 
   useEffect(() => {
     let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
@@ -12,13 +12,13 @@ const DynamicPokemonCard = ({ name }) => {
       .then((pokemon) => {
         setDynamicPokemon(pokemon);
       })
-      .then(() => setApiCallFiinished(true));
+      .then(() => setApiCallFinished(true));
   }, [name]);
 
   return (
     <div className='component'>
       <h2>DynamicPokemonCard</h2>
-      {ApiCallFinished && (
+      {apiCallFinished && (
         <div className='pokemon_result'>
           <h3>{dynamicPokemon.name.toUpperCase()}</h3>
           <img
