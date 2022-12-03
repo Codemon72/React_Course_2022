@@ -22,7 +22,7 @@ const DynamicPokemonCard = ({ name }) => {
         <div className='pokemon_result'>
           <h3>{dynamicPokemon.name.toUpperCase()}</h3>
           <img
-            src={dynamicPokemon.sprites.front_default}
+            src={dynamicPokemon.sprites.other['official-artwork'].front_default}
             alt={dynamicPokemon.name}
             className='pokemon_img'
           />

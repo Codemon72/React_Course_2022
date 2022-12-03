@@ -145,4 +145,5 @@ const handelFormInputChange = (name, event) => {
 ```
 
 > Final Remarks: many thanks to the free https://pokeapi.co/ API
+
 > 👉 No Pokemons where hurt during the course of these exercises! 👈
