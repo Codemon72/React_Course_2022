@@ -6,7 +6,6 @@ To check out this repo:
 2. cd into `code/lesson02/exercise` and run `npm install`
 3. run `npm start`
 
-> (little effort was spent on the styling 👉 all on the react magic)
 
 ### Examples of
 - conditional rendering / short circuiting 
@@ -14,8 +13,6 @@ To check out this repo:
 - API call inside useEffect / "pure function"
 - routing with [Wouter](https://github.com/molefrog/wouter)
 - dynamic routing
-
-
 
 ### Notes from the Course
 
@@ -146,4 +143,4 @@ const handelFormInputChange = (name, event) => {
 
 > Final Remarks: many thanks to the free https://pokeapi.co/ API
 
-> 👉 No Pokemons where hurt during the course of these exercises! 👈
+> (No Pokemons where hurt during the course of these exercises!)

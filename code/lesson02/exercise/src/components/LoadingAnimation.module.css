@@ -1,3 +1,10 @@
+.component {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  border: 2px solid #FF8749;
+  border-radius: 1rem;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+}
 /* Bouncing Balls */
 .box {
   align-self: center;

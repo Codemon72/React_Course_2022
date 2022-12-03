@@ -115,6 +115,11 @@ form {
   display: block;
   margin: 1.5rem 0;
 }
+pre {
+  background-color: #E6F4F1;
+  font-size: 1rem;
+  max-width: 75%;
+}
 
 .article {
   padding: 1.5rem;

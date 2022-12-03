@@ -1,6 +1,7 @@
 const BlackBox = ({divStyle}) => {
-
+// todo
   function onDoubleClickHandler(e){
+    console.log('black')
     console.log(e.target.innerHTML)
   }
 
