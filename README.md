@@ -141,6 +141,19 @@ const handelFormInputChange = (name, event) => {
   )
 ```
 
+### different ways to implement CSS
+- Global CSS
+  - all styles in one place
+  - file can easily get to big
+- CSS Modules
+  - looks like regular CSS
+  - can be scoped to individual component (no name collisions)
+  - can reduce bundle size
+- styled components / CSS-in-JS
+  - 'styled-components' is a library; there are others (like 'Emotion')
+  - needs to be installed: `npm install styled-components`
+
+
 > Final Remarks: many thanks to the free https://pokeapi.co/ API
 
 > (No Pokemons where hurt during the course of these exercises!)

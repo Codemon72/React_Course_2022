@@ -10,7 +10,7 @@ import FormAndProfile from "./FormAndProfile"
 import CallApiExercise from "./CallApiExercise"
 import RouterExample from "./RouterExample"
 import DynamicRouting from "./DynamicRouting"
-import LoadingAnimationCSSModules from "./LoadingAnimationCSSModules"
+import StylingWithCSSModules from "./StylingWithCSSModules"
 
 const Article = ({ messageCounter, setMessageCounter }) => {
   const [user, setUser] = useState({
@@ -22,7 +22,7 @@ const Article = ({ messageCounter, setMessageCounter }) => {
     <article className='p-4 article'>
       <DynamicRouting />
       <RouterExample />
-      <LoadingAnimationCSSModules />
+      <StylingWithCSSModules />
       <CallApiExercise />
       <Greeting user={user}>
         <BatmanBox user={user} setUser={setUser} />

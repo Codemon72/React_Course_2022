@@ -1,15 +1,15 @@
 const BlackBox = ({divStyle}) => {
-// todo
+
   function onDoubleClickHandler(e){
-    console.log('black')
     console.log(e.target.innerHTML)
   }
 
   return (
-    <div style={divStyle}>
+    <div style={divStyle} onDoubleClick={onDoubleClickHandler}>
       Look what I done! 🫢
       <br />
-      <span onDoubleClick={onDoubleClickHandler}>(This is my component Blackbox)</span>
+      <span>(This is my component Blackbox)</span><br />
+      <span>(Double click to log its HTML)</span>
     </div>
   )
 }
