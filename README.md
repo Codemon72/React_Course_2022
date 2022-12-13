@@ -152,8 +152,9 @@ const handelFormInputChange = (name, event) => {
 - styled components / CSS-in-JS
   - 'styled-components' is a library; there are others (like 'Emotion')
   - needs to be installed: `npm install styled-components`
+  - only component related CSS is added to the page
+  - no class name collisions
+  - Documentation: https://styled-components.com/
 
 
 > Final Remarks: many thanks to the free https://pokeapi.co/ API
-
-> (No Pokemons where hurt during the course of these exercises!)

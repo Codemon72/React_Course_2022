@@ -11,6 +11,7 @@ import CallApiExercise from "./CallApiExercise"
 import RouterExample from "./RouterExample"
 import DynamicRouting from "./DynamicRouting"
 import StylingWithCSSModules from "./StylingWithCSSModules"
+import StylingWithStyledComponents from "./StylingWithStyledComponents"
 
 const Article = ({ messageCounter, setMessageCounter }) => {
   const [user, setUser] = useState({
@@ -23,6 +24,7 @@ const Article = ({ messageCounter, setMessageCounter }) => {
       <DynamicRouting />
       <RouterExample />
       <StylingWithCSSModules />
+      <StylingWithStyledComponents />
       <CallApiExercise />
       <Greeting user={user}>
         <BatmanBox user={user} setUser={setUser} />
