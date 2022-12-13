@@ -150,10 +150,11 @@ const handelFormInputChange = (name, event) => {
   - can be scoped to individual component (no name collisions)
   - can reduce bundle size
 - styled components / CSS-in-JS
-  - 'styled-components' is a library; there are others (like 'Emotion')
+  - 'styled-components' is a library; (there are others like 'Emotion')
   - needs to be installed: `npm install styled-components`
   - only component related CSS is added to the page
   - no class name collisions
+  - can be nested like Sass
   - Documentation: https://styled-components.com/
 
 
