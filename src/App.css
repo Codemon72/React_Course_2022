@@ -212,7 +212,10 @@ pre {
   align-items: center;
   text-align: center;
 }
-
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
 .nav_link {
   background-color: #008080;
   color: #fff;

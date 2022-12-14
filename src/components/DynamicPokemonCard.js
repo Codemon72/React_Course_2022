@@ -40,7 +40,7 @@ const DynamicPokemonCard = ({ name }) => {
           <>
           <br />
           <strong>Items held:</strong>
-          {dynamicPokemon?.held_items?.map((index) => (
+          {dynamicPokemon.held_items.map((index) => (
             <span key={index.item.name}>{index.item.name}</span>
           ))}
           </>)}
