@@ -154,6 +154,7 @@ const handelFormInputChange = (name, event) => {
   - needs to be installed: `npm install styled-components`
   - only component related CSS is added to the page
   - no class name collisions
+  - regular CSS syntax
   - can be nested like Sass
   - Documentation: https://styled-components.com/
 
