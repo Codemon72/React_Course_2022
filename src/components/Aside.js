@@ -4,8 +4,9 @@ import MenuItem from './MenuItem';
 const Aside = ({ messageCounter }) => {
   const menu = [
     { title: 'Home', href: '/' },
-    { title: 'About me', href: '/about' },
-    { title: 'Inbox', href: '#inbox', count: messageCounter },
+    { title: 'MessageNotification', href: '#inbox', count: messageCounter },
+    { title: 'Dynamic Routing', href: '#dynamicRouting' },
+    { title: 'API call + local storage', href: '#apiCallLocalStorage' },
   ];
 
   return (

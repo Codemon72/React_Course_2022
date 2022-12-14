@@ -3,7 +3,7 @@ import DynamicPokemonCard from './DynamicPokemonCard'
 
 const DynamicRouting = () => {
   return (
-    <div className='component'>
+    <div className='component' id='dynamicRouting'>
       <h2>DynamicRouting</h2>
       <nav>
         <Link href='/pokemon/squirtle'>

@@ -1,5 +1,6 @@
+import CounterBox from "./CounterBox"
 
-const MessageNotification = ({messageCounter}) => {
+const MessageNotification = ({messageCounter, setMessageCounter}) => {
   return (
     <div className="component" id="inbox">
       <h2>MessageNotification</h2>
@@ -7,6 +8,10 @@ const MessageNotification = ({messageCounter}) => {
       <br />
       <br />
       Please go to your inbox to read them.
+      <CounterBox
+        setMessageCounter={setMessageCounter}
+        messageCounter={messageCounter}
+      />
     </div>
   )
 }

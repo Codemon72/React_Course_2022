@@ -2,7 +2,6 @@ import { useState } from "react"
 import Greeting from "./Greeting"
 import TestBoxComponents from "./TestBoxComponents"
 import MessageNotification from "./MessageNotification"
-import CounterBox from "./CounterBox"
 import BatmanBox from "./BatmanBox"
 import CountingContainer from "./CountingContainer"
 import ExampleForm from "./ExampleForm"
@@ -22,6 +21,7 @@ const Article = ({ messageCounter, setMessageCounter }) => {
 
   return (
     <article className='p-4 article'>
+      <MessageNotification messageCounter={messageCounter} setMessageCounter={setMessageCounter}/>
       <DynamicRouting />
       <ApiCallWithLocalStorage />
       <RouterExample />
@@ -31,11 +31,6 @@ const Article = ({ messageCounter, setMessageCounter }) => {
       <Greeting user={user}>
         <BatmanBox user={user} setUser={setUser} />
       </Greeting>
-      <MessageNotification messageCounter={messageCounter} />
-      <CounterBox
-        setMessageCounter={setMessageCounter}
-        messageCounter={messageCounter}
-      />
       <TestBoxComponents />
       <CountingContainer />
       <ExampleForm />

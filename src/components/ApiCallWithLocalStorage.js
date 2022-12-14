@@ -2,7 +2,7 @@ import PokemonProfileMiniCard from './PokemonProfileMiniCard';
 
 const ApiCallWithLocalStorage = () => {
   return (
-    <div className='component'>
+    <div className='component' id='apiCallLocalStorage'>
       <h2>ApiCallWithLocalStorage</h2>
       <div className='pokemon-mini-card-container'>
         {Array.from(Array(15)).map((_, i) => (
