@@ -28,13 +28,13 @@ const Article = ({ messageCounter, setMessageCounter }) => {
       <StylingWithCSSModules />
       <StylingWithStyledComponents />
       <CallApiExercise />
+      <CountingContainer />
       <Greeting user={user}>
         <BatmanBox user={user} setUser={setUser} />
       </Greeting>
-      <TestBoxComponents />
-      <CountingContainer />
       <ExampleForm />
       <FormAndProfile />
+      <TestBoxComponents />
     </article>
   );
 };

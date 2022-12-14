@@ -27,7 +27,7 @@ const FormAndProfile = () => {
   };
 
   return (
-    <div className='component'>
+    <div className='component' id='formElements'>
       <h2>FormAndProfile</h2>
       <div className='card-component'>
         <span>First Name: {personData.firstName}</span>

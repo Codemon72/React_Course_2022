@@ -4,7 +4,7 @@ import CallApiExercise from './CallApiExercise'
 
 const RouterExample = () => {
   return (
-    <div className='component'>
+    <div className='component' id='routerExample'>
       <h2>RouterExample</h2>
       <div>
         <Link href='/'>

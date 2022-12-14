@@ -7,6 +7,8 @@ const Aside = ({ messageCounter }) => {
     { title: 'MessageNotification', href: '#inbox', count: messageCounter },
     { title: 'Dynamic Routing', href: '#dynamicRouting' },
     { title: 'API call + local storage', href: '#apiCallLocalStorage' },
+    { title: 'Router Example', href: '#routerExample' },
+    { title: 'Form Elements', href: '#formElements' },
   ];
 
   return (
