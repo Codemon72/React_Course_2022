@@ -229,3 +229,24 @@ nav {
   background-color: #2f4f4f;
   font-style: italic;
 }
+.pokemon-mini-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.component__mini {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 120px;
+  text-align: center;
+  padding: .5rem;
+  background-color: #E6F4F1;
+  border: 2px solid #008080;
+  border-radius: 1rem;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.12);
+  margin: .5rem;
+}
+.component__mini div:last-child {
+  margin-top: auto;
+}

@@ -7,12 +7,17 @@ To check out this repo:
 3. run `npm start`
 
 
+The Repo is deployed at https://codemon72-react-course-2022-11.netlify.app/
+
+
 ### Examples of
 - conditional rendering / short circuiting 
 - input field as controlled component
 - API call inside useEffect / "pure function"
 - routing with [Wouter](https://github.com/molefrog/wouter)
 - dynamic routing
+- local storage
+- styling scoped to component with CSS Modules and with styled-components library
 
 ### Notes from the Course
 

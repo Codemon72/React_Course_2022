@@ -12,6 +12,7 @@ import RouterExample from "./RouterExample"
 import DynamicRouting from "./DynamicRouting"
 import StylingWithCSSModules from "./StylingWithCSSModules"
 import StylingWithStyledComponents from "./StylingWithStyledComponents"
+import ApiCallWithLocalStorage from "./ApiCallWithLocalStorage"
 
 const Article = ({ messageCounter, setMessageCounter }) => {
   const [user, setUser] = useState({
@@ -22,6 +23,7 @@ const Article = ({ messageCounter, setMessageCounter }) => {
   return (
     <article className='p-4 article'>
       <DynamicRouting />
+      <ApiCallWithLocalStorage />
       <RouterExample />
       <StylingWithCSSModules />
       <StylingWithStyledComponents />
