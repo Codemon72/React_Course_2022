@@ -3,7 +3,7 @@
 To check out this repo:
 
 1. clone repository
-2. cd into `code/lesson02/exercise` and run `npm install`
+2. cd into it and run `npm install`
 3. run `npm start`
 
 
