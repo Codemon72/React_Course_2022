@@ -28,7 +28,11 @@ const RouterExample = () => {
           </div>
         </Route>
         <Route path='/about'>
-          <div className='component'>About Codemon72</div>
+          <div className='component'>
+          <h4>About Codemon72:</h4>
+          <div>React Developer, located in Hamburg, Germany</div>
+          <div>associated GitHub Profile: <a href="https://github.com/Codemon72" target="_blank" rel="noopener noreferrer">https://github.com/Codemon72</a></div>
+          </div>
         </Route>
         <Route path='/counting-container'>
           <CountingContainer />

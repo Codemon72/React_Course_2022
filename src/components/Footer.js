@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className='footer'>
-        by Codemon72 (2022)
+        by <a href="https://github.com/Codemon72" target="_blank" rel="noopener noreferrer">Codemon72</a> (2022)
     </footer>
   )
 }
